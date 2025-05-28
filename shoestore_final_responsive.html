@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* @keyframes bottom {
+    0%{
+        transform: translatey(100%);
+    }
+    100%{
+        transform: translatey(0%);
+    }
+}
+.body{
+    
+    animation: bottom 3s linear ;
+
+} */
+
+        nav {
+
+            display: flex;
+            font-family: sans-serif;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+            background-color: beige;
+
+        }
+
+        h1 {
+            font-size: 42px;
+            color: black;
+            cursor: pointer;
+            margin-right: 90px;
+
+        }
+
+        .a {
+            text-align: right;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-20%);
+            }
+
+            50% {
+                transform: translateX(5%);
+            }
+
+            70% {
+                transform: translatex(30%);
+            }
+
+            100% {
+                transform: translateX(-15%);
+            }
+        }
+
+        .main {
+
+            height: auto;
+        }
+
+        .h1 {
+            animation: move 30s linear infinite;
+
+            text-align: center;
+            margin-left: 45px;
+            margin-top: 50px;
+            font-family: sans-serif;
+
+        }
+
+        .para {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+            font-family: sans-serif;
+        }
+
+        .btn {
+            padding: 40px;
+
+
+            align-items: center;
+            gap: 50px;
+
+
+
+        }
+
+        .btn button {
+            border: none;
+            justify-content: flex-end;
+            height: 80px;
+            width: 88vw;
+            background-color: rgb(233, 233, 250);
+            border-radius: 40px;
+            animation: movebox 0.5s linear;
+
+        }
+
+        .btn button:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        @keyframes movebox {
+            0% {
+                transform: translatey(600%);
+            }
+
+            100% {
+                transform: translatey(0%);
+            }
+
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100vw;
+            background-color: black;
+
+        }
+
+        .about {
+            font-family: sans-serif;
+            font-size: larger;
+            color: white
+        }
+
+        .heading {
+            margin-top: 30px;
+            font-weight: bolder;
+            font-size: 40px;
+            animation: about 3s linear;
+            color: white
+        }
+
+        .text {
+
+            text-align: justify;
+            margin: 10px 20px;
+            animation: about 3s linear;
+
+
+        }
+
+        @media (max-width:775px) {
+            body {
+                width: 100%;
+            }
+
+            nav {
+                width: 100%;
+                font-size: smaller;
+
+            }
+
+            nav a {
+                display: inline;
+                flex-direction: row;
+                justify-content: right;
+                font-size: 12px;
+            }
+
+            nav h1 {
+                font-size: 25px;
+            }
+
+            footer {
+                text-overflow: none;
+                width: 100%;
+                font-size: 12px;
+                justify-content: left;
+            }
+
+            .btn {
+                flex-direction: column;
+            }
+
+            #male {
+                animation: male 0.5s linear;
+            }
+
+            @keyframes male {
+                0% {
+                    transform: translateX(-50%);
+                }
+
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+
+            #female {
+                animation: female 0.5s linear;
+
+            }
+
+            @keyframes female {
+                0% {
+                    transform: translateX(150%);
+                }
+
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+
+            header {
+                font-size: 20px;
+            }
+
+        }
+
+
+        .bton {
+            font-size: 40px;
+            color: blue;
+            margin-bottom: 30px;
+        }
+
+        .contact a {
+            text-decoration: none;
+
+            color: white;
+            padding: 50px;
+        }
+
+        .b {
+            display: inline;
+        }
+
+        .follow {
+            font-family: sans-serif;
+        }
+
+        ul li {
+            display: inline;
+            flex-direction: row;
+
+
+        }
+
+        .follow a {
+            color: white;
+            margin: 40px;
+            text-decoration: none;
+
+        }
+
+        @keyframes about {
+            0% {
+                transform: translateX(-30%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+
+
+        }
+
+        .mainhero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #hero {
+            height: auto;
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* margin: auto; */
+            animation: hero 0.5s linear;
+            background-color: whitesmoke;
+            /* width: 100%; */
+            padding: 2px;
+/* border: 2px solid blue; */
+
+
+        }
+        #hero1 {
+            height: auto;
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* margin: auto; */
+            animation: hero 0.5s linear;
+            background-color: whitesmoke;
+            /* width: 100%; */
+            padding: 2px;
+/* border: 2px solid blue; */
+
+
+        }
+
+        .devam {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 95%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+        .devam1 {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px black;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+
+        .devam1 img {
+            width: 90%;
+            height: auto;
+            border-radius: 15px;
+            margin: 15px;
+        }
+
+        .devam1 h5 {
+            margin-right: 40px;
+            text-decoration: underline;
+        }
+
+        .devam1 h2 {
+            margin-right: 40px;
+            font-weight: 100;
+            margin-right: 50px;
+            text-decoration: underline;
+        }
+
+        .devam1 p {
+            margin-left: 12px;
+            text-align: start;
+        }
+
+        .mrp {
+            display: inline;
+        }
+
+        .p {
+            display: flex;
+            justify-content: left;
+            margin-right: 20px;
+            padding-top: 10px;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+        }
+
+        dutton {
+            margin: 20px;
+            padding: 6px;
+            border-radius: 20px;
+            background-color: rgb(163, 231, 248);
+            color: blue;
+        }
+
+        dutton:hover {
+            background-color: white;
+        }
+
+
+        @keyframes hero {
+            0% {
+                transform: translatey(-4%);
+            }
+
+            100% {
+                transform: translatey(0%);
+            }
+
+        }
+
+        @media screen and (max-width:775px) {
+            .devam {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 95%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+            .devam1 {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px black;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+}
+
+            .devam1 img {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            dutton:hover {
+                background-color: white;
+            }
+
+            #hero {
+                margin: auto;
+                /* width: 100%; */
+            }
+             #hero1{
+                margin: auto;
+                /* width: 100%; */
+            }
+
+            .btn {
+                margin: auto;
+            }
+
+        }
+    
+@media (max-width: 600px) {
+  .h1 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .btn button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .h1 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .btn button {
+    width: 100%;
+    font-size: 16px;
+  }
+  .devam1 {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body class="body">
+    <header>
+        <nav>
+            <h1 class="a">Shoes Store</h1>
+
+            <div class="nav">
+                <a class="a" href="shoestore.html" target="_self">Home</a>
+                <a class="a" href="shoestore.html" target="_self">Products</a>
+                <a class="a" href="shoestore.html" target="_self">Cart</a>
+                <a class="a" href="#footer" target="_self">About</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <h1 class="h1">Welcome To Our Store ! </h1>
+            <p class="para">please selct the gender to find items</p>
+            <div class="btn">
+                <button onclick="showdiv()" id="male" class="bton">MALE</button>
+                <div class="mainhero">
+                    <div id="hero">
+                        <div class="devam">
+                            <div class="devam1">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="shoes1">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button>BUY NOW</button>
+
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiUJFQqX5hWHxqHu6XD3jSbhq5NvIb5qYJw&s"
+                                    alt="shoe 2">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button>BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-BGUQPQQHTcFy0khno6vmkEi3ZET1pE4vw&s"
+                                    alt="shoe 3">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS26El6TYodfWB3WPcdLUDLdU15ux1LTqzYVg&s"
+                                    alt="shoe 4">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="shoe 5">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="shoe 6">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJEz6fXsTVUHU6C_5TxwEUk2ykN5KXxE-RtA&s"
+                                    alt="shoe 7 ">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmsjYLVCogFgLiOXlCi6rnnPKoWWRQHjhvdg&s"
+                                    alt="shoe 8">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQSnGDWmEmahb9BoixUlw1rVBu4sk-c6QWZw&s"
+                                    alt="shoe 9">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj4s0DhOYLuMHC9a4eraXTkdiQB1REpl7UZQ&s"
+                                    alt="shoe 10">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR-9xi9ngWEZ4_jmRDosION6YuFCvxNoVhjw&s"
+                                    alt="shoe 11">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREi3-H0AGWsp1Nm7hvAf1b-tCFI-41QlXBug&s"
+                                    alt="shoe 12">
+                                <h5>white sneeker for men</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="showdiv2()" id="female" class="bton">FEMALE</button>
+                <div class="mainhero">
+                    <div id="hero1">
+                        <div class="devam">
+                            <div class="devam1">
+                                <img src="
+data:image/jpeg;base64,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
+                                " alt="female shoe 1">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button>BUY NOW</button>
+
+                            </div>
+                            <div class="devam1">
+                               <img src="
+data:image/jpeg;base64,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
+                               " alt="shoe 2">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button>BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFraQjD0KqOVo7v5VNaNXFWJ3xr0WKeAHJQ&s
+                                " alt="shoe 3">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                               <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCP6ApULHG8wKnQ3oKvl8QswlujqTUJVfzA&s
+                               " alt="shoe 4">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                               <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZVGQ5ML4s21ygowBAIMUgaAiMNh2uwdEN_Q&s
+                               " alt="shoe 5">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgoYLaFdVgNBgCPKUiP9MifwiNVW_PoEtOXA&s
+                                " alt="shoe 6">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtmx_HinhoauP59C4WFfDvkI5VoX_iZwC1ug&s
+                                " alt="shoe 7">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                             <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5K3paAPG18V6NYjJMx42-gHQNoBhmWN9jaA&s
+                             " alt="shoe 8">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                               <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoPHmAUhsWw67lVcCj1H1ykuf1fV-_1hfpQ&s
+                               " alt="shoe 9">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEvOqp7XJcA9enH2T_bYxU9l8Fqb8NFDAo9A&s
+                                " alt="shoe 10">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbUW-CRzN-fTLXCPhSpN28QmksISofpvpzfQ&s
+                                " alt="shoe 11">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                            <div class="devam1">
+                                <img src="
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpHpBxvxLyG-U67234ynQ3eqA8P1ynHl6egA&s
+                                " alt="shoe 12">
+                                <h5>female footware</h5>
+                                <div class="p">MRP: <p class="mrp">100000</p>
+                                    <p>80000</p>
+                                </div>
+                                <h2>
+                                    Description:
+                                </h2>
+                                <p>Lorem ipsum dolor sit amet aueegfffnconsecteturad ipisicing elit. Enim ea corrupti
+                                    corporis pla</p>
+
+                                <button class="buy">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="information" id="footer">
+
+            <div class="about">
+                <p class="heading">About Us:</p>
+                <p class="text">Lorem45 ipsum dolor sit, amet consectetur adipisicing elit. Sed sapiente aut libero eius
+                    voluptatum
+                    et, voluptates dolor totam officiis porro quas esse obcaecati, hic dolore saepe consequuntur quam
+                    reprehenderit nihil.45 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, temporibus.
+                    Fugit ab minima nemo molestiae nisi neque eveniet ipsam, impedit amet praesentium beatae, nostrum
+                    nobis pariatur aliquam corrupti velit eos accusantium vitae maiores, deserunt eius exercitationem
+                    animi. Repudiandae, sapiente officia. Voluptas alias dolor possimus facilis?</p>
+            </div>
+            <div class="contact about">
+                <p class="heading">To contact us:</p>
+                <a href="www.google.com" class="text b">Email</a>
+                <p class="text b">Tel:+91 1234567890</p>
+            </div>
+            <div class="follow">
+                <p class="heading">Follow Us On:</p>
+                <ul>
+                    <li><a href="www.instagram.com" class="c">instagram</a></li>
+                    <vli> <a href="www.x.com" class="c">X/Twitter</a></li>
+                        <li> <a href="www.facebook.com" class="c">facebook</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+        function showdiv() {
+            let x;
+            x = document.getElementById('hero');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+         function showdiv2() {
+            let x;
+            x = document.getElementById('hero1');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
